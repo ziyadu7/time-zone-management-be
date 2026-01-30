@@ -8,9 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use('/api', routes);
 app.use('/',(req,res)=>{
     res.send('Welcome to Time Zone and Time Slot Management API')
 })
-app.use('/api', routes);
 
 export default app;
